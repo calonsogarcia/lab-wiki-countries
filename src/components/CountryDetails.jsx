@@ -14,7 +14,9 @@ export default function CountryDetails({match, countries}) {
     return (
         <div>
             <p>Country details</p>
+            <p> {foundCountry.flag} </p>
             <p> {foundCountry.name.official} </p>
+            <p> {foundCountry.region} </p>
         </div>
     )
 }

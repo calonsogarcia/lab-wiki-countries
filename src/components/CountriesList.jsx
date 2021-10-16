@@ -8,7 +8,7 @@ export default function CountriesList(props) {
             { //work with 5 or 10 contries to make it faster
             // use NavLink
             
-                props.countries.slice(0, 5).map(eachCountry => <Link to={`/country/${eachCountry.cca3}`}>{eachCountry.name.common}</Link>)
+                props.countries.map(eachCountry => <Link to={`/country/${eachCountry.cca3}`}>{eachCountry.name.common}</Link>)
             }      
         </div>
     )
