@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class CountryDetails extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+
+export default function CountryDetails({match, countries}) {
+
+
+    //console.log({CountriesList})
+
+    const foundCountry= countries.find((oneCountry) => {
+        return oneCountry.cca3 === match.params.name
+    })
+
+
+    return (
+        <div>
+            <p>Country details</p>
+            <p> {foundCountry.name.official} </p>
+        </div>
+    )
 }
-
-export default CountryDetails;

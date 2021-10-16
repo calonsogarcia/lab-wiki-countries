@@ -18,9 +18,9 @@ class App extends Component {
           <div className="row">
             <CountriesList countries={countries} />
 
-            {/* <Switch>
-              <Route path="/country/:name" component={CountryDetails}/>
-            </Switch> */}
+            <Switch>
+              <Route path="/country/:name" render={(routeProps) => <CountryDetails {...routeProps} countries={countries}/>}/>
+            </Switch> 
 
           </div>
         </div>
